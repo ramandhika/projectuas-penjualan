@@ -1,0 +1,71 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Project UAS - Penjualan</title>
+    <link href="assets/boostrap/bootstrap.min.css" rel="stylesheet"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="home.aspx">Project UAS - Penjualan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="home.aspx">Home</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="home.aspx" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Master
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="insertProduk.aspx">Produk</a></li>
+                            <li>
+                                <hr class="dropdown-divider"/>
+                            </li>
+                            <li><a class="dropdown-item" href="insertPegawai.aspx">Pegawai</a></li>
+                        </ul>
+                    </li>
+                    <a class="nav-link" href="transaksi.aspx">Transaksi</a>
+                    <a class="nav-link" href="logout.aspx">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Tutup Navbar -->
+
+    <!-- Container -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="mt-3">
+                      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                      </asp:ContentPlaceHolder>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="sticky-bottom">
+        <div class="container">
+            <div class="row pt-3">
+                <div class="col fw-semibold">
+                    <p>CopyRight 2023. All Right Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="assets/boostrap/bootstrap.bundle.min.js"></script>
+<script src="assets/kit.fontawesome.icon.js"></script>
